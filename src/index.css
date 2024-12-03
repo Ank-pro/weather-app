@@ -177,9 +177,37 @@ main {
     font-weight: bold;
 }
 
+.error-message{
+    color: black;
+}
+
 
 /* fav list */
 .fav-container{
     height: 100vh;
     
 }
+
+.default-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    text-align: center;
+  }
+  
+  .default-content {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  }
+  
+  .placeholder-icon {
+    font-size: 100px;
+    margin: 20px 0;
+  }
+  
+  .hint {
+    color: #888;
+    font-style: italic;
+  }

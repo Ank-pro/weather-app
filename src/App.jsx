@@ -5,13 +5,12 @@ import "./App.css";
 import { Switch } from "antd";
 import { FavContainer } from "./components/fav-container/FavContainer";
 
-
 function App() {
   const [todayWeather, setTodayWeather] = useState(null);
   const [nextFiveDaysForcast, setNextFiveDaysForcast] = useState([]);
   const [city, setCity] = useState("");
   const [error, setError] = useState(null);
-  const [IsFahrenheit,setIsFahrenheit] = useState(false);
+  const [IsFahrenheit, setIsFahrenheit] = useState(false);
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
@@ -152,6 +151,17 @@ function App() {
           </div>
         )}
 
+        {!todayWeather && (
+          <div className="default-screen">
+            <div className="default-content">
+              <h2>Welcome to Weather App</h2>
+              <p>Search for a city to get started</p>
+              <div className="placeholder-icon">🌦️</div>
+              <p className="hint">Type a city name in the search bar above</p>
+            </div>
+          </div>
+        )}
+
         {/* Today's Weather */}
         {todayWeather && (
           <div className="today-weather">
@@ -160,11 +170,15 @@ function App() {
                 {city}, {getDayName(todayWeather.dt_txt)}
               </p>
               <span id="toggle-icon">
-              <Switch defaultChecked checkedChildren="°C" unCheckedChildren="°F"
-              style={{
-                backgroundColor: IsFahrenheit ? '#FFB347' : '#FF6961'
-              }}
-               onClick={()=>setIsFahrenheit(!IsFahrenheit)}/>
+                <Switch
+                  defaultChecked
+                  checkedChildren="°C"
+                  unCheckedChildren="°F"
+                  style={{
+                    backgroundColor: IsFahrenheit ? "#FFB347" : "#FF6961",
+                  }}
+                  onClick={() => setIsFahrenheit(!IsFahrenheit)}
+                />
               </span>
               <span
                 className={`material-symbols-outlined ${
@@ -183,7 +197,10 @@ function App() {
                   className="weather-icon-large"
                 />
                 <div className="temp-details">
-                  <h3>{convertTemperature(Math.round(todayWeather.main.temp))}{!IsFahrenheit ? '°C' : '°F'}</h3>
+                  <h3>
+                    {convertTemperature(Math.round(todayWeather.main.temp))}
+                    {!IsFahrenheit ? "°C" : "°F"}
+                  </h3>
                   <p>{todayWeather.weather[0].description}</p>
                 </div>
               </div>
@@ -214,7 +231,10 @@ function App() {
                   <i className="fas fa-thermometer-half"></i>
                   <div>
                     <h4>Feels Like</h4>
-                    <p>{convertTemperature(Math.round(todayWeather.main.temp))}{!IsFahrenheit ? '°C' : '°F'}</p>
+                    <p>
+                      {convertTemperature(Math.round(todayWeather.main.temp))}
+                      {!IsFahrenheit ? "°C" : "°F"}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -233,7 +253,10 @@ function App() {
                   alt={day.weather[0].description}
                 />
                 <div className="forecast-temp">
-                  <p>{convertTemperature(Math.round(day.main.temp))}{!IsFahrenheit ? '°C' : '°F'}</p>
+                  <p>
+                    {convertTemperature(Math.round(day.main.temp))}
+                    {!IsFahrenheit ? "°C" : "°F"}
+                  </p>
                   <p>{day.weather[0].description}</p>
                 </div>
               </div>
