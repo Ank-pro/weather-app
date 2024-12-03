@@ -1,0 +1,114 @@
+aside {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/weather2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 375px;
+    min-width: 300px;
+    height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgba(40, 37, 108, 0.5);
+    overflow-y: auto;
+  }
+  
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+.heading p {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.fav-list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fav-list li {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgb(198, 202, 206);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.fav-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: rgba(233, 234, 237, 0.7);
+}
+
+.fav-city-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #2c3e50;
+}
+
+.fav-city-info span {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.fav-city-weather {
+  display: flex;
+  align-items: center;
+}
+
+.fav-city-weather img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  filter: saturate(1.2) brightness(1.1);
+}
+
+.fav-list button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  opacity: 0.7;
+}
+
+.fav-list button:hover {
+  color: #c0392b;
+  opacity: 1;
+}
+
+.no-favorites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  color: #cacdd0;
+  font-size: 1rem;
+  font-style: italic;
+  padding: 20px;
+}

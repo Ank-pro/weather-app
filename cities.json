@@ -1,3 +1,22 @@
 {
-  "favorites": []
+  "favorites": [
+    {
+      "id": "4a46",
+      "name": "pune",
+      "temp": 23,
+      "icon": "04n"
+    },
+    {
+      "id": "a647",
+      "name": "delhi",
+      "temp": 18,
+      "icon": "01n"
+    },
+    {
+      "id": "8f62",
+      "name": "mumbai",
+      "temp": 29,
+      "icon": "03n"
+    }
+  ]
 }

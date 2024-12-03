@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Dashboard } from "./components/Dashboard";
+import { Dashboard } from "./components/dashboard/Dashboard";
 import "./App.css";
 import { Switch } from "antd";
-import { FavContainer } from "./components/FavContainer";
+import { FavContainer } from "./components/fav-container/FavContainer";
 
 
 function App() {
@@ -178,7 +178,7 @@ function App() {
             <div className="today-details">
               <div className="main-weather-section">
                 <img
-                  src={`https://openweathermap.org/img/wn/${todayWeather.weather[0].icon}@4x.png`}
+                  src={`https://openweathermap.org/img/wn/${todayWeather.weather[0].icon}@2x.png`}
                   alt={todayWeather.weather[0].description}
                   className="weather-icon-large"
                 />
