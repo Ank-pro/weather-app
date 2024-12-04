@@ -1,8 +1,48 @@
-# React + Vite
+**Weather App**
+Overview
+A responsive weather application built with React, Vite, and PNPM that provides current weather and 5-day forecast information.
+Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-Search weather by city
+-Toggle between Celsius and Fahrenheit
+-Add cities to favorites
+-View detailed weather information
 
-Currently, two official plugins are available:
+**Tech Stack**
+-React
+-Vite
+-PNPM
+-Axios
+-Ant Design
+-JSON Server
+-OpenWeatherMap API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Prerequisites**
+
+-Node.js (v18+)
+-PNPM
+-OpenWeatherMap API Key
+
+Installation
+
+**Clone the repository**
+git clone https://github.com/Ank-pro/weather-app.git
+cd weather-app
+
+**Install node modules**
+pnpm install
+
+**Json-server**
+pnpm json-server cities.json --port 3001
+
+**Development Server**
+pnpm run dev
+
+**Configuration**
+Weather API Key: 07c15051991d97ea48955e160d3d5d1c
+JSON Server Port: 3001
+
+**API Reference**
+Weather Data: OpenWeatherMap API
+Base URL: https://api.openweathermap.org/data/2.5/forecast
+Favorites: Local JSON Server at http://localhost:3001/favorites
