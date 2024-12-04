@@ -1,7 +1,7 @@
 # Weather App
 
 ## Overview
-A responsive weather application built with React, Vite, and PNPM that provides current weather and 5-day forecast information.
+A weather application built with React, Vite, and PNPM that provides current weather and 5-day forecast information.
 
 ## Features
 - Search weather by city
